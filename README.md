@@ -1,85 +1,48 @@
-# Zillow-Research-Analysis
+# Defensive Stock Analysis
 by: Armun Shakeri
 
 ### Overview and Business Problem
 
-The goal of this analysis is to identify the top 5 zipcodes for our client to invest in. The team is not familiar with the Texas housing market therefore we will incorporate coefficients of variance to help filter most risk appropriate counties. The results from this analysis will provide them with the forecast of the next 10 year mean house value in the top 5 ZipCodes as well as ROI in 1 year, 3 years, 5 years, and 10 years.
+During times of uncertainty investors want to protect their assets from loss. For this porject we will analyze 3 consumer defensive stocks by performing time series analysis (SARIMA models) and linear regression. By doing so we will try to forecast stock prices in the near future. We will choose the 3 stocks based on highest market caps. The main questions we will be asking are do defensive stocks protect against market volatility? If so should you buy or sell the top 3 market weighted defensive stocks. This analysis is for educational purposes only and does not represent any investment recommendations.
 
 
 ### Data
 
-The dataset for this analysis was gathered from Zillow Research, and contains median home sales price in 1,293 individual ZipCodes from 2000-01-31 to 2022-08-31. Each row represents a unique ZipCode indexed with RegionID, and contains other location info as well as median housing sales price for each month. 
+The data acquired for this project represents broad market data including, S&P 500, stocks within the S&P500, Etherum, PPI (producer price index), Dollar index, and gold rates.
+
+The final merged dataset (df4) has 190 columns and contains 8 columns:
+Date: Date of close
+Symbol: Symbol of defensive stock
+Close: Close price of defensive stock
+SPClose: Close Price of S&P 500
+Gold: Gold Price
+Ether: Ethereum Price
+USD: US dollar index
+PPI: Producer Price Index
 
 ### Methods and Analysis
 
-To begin analysis we first calculated the average ROI for all counties in Texas and narrowed the list down to the top 10 ZipCodes by selecting the top ZipCodes with highest average ROI in each county. To be mindful of black swan events such as housing bubbles and recessions we used the coefficient of variation to take risk into consideration. This technique is very common within finance to determine how much volatility is assumed in comparison with the amount of return expected from the investments. We also selected data in the top 30-70 quartiles to add some variation. 
 
-For prediction we ran 3 models, Random Walk, ARIMA, and SARIMAX. Out of the three we selected the SARIMAX model which performed the best to forecast the average predicted home values for each of the top 10 ZipCodes for the next 10 years. 
-
-![graph1](./Images/IMG1.png)
-
-![graph2](./Images/IMG2.png)
 
 ### Conclusion
 
-Based on our analysis, our results show that these 5 zipcodes have the best ROI:
-
-**1) ZipCode 78229 Bexar County - San Antonio (10 years):**
-Total Expected ROI in 1 year: 2.73%
-Total Expected ROI in 3 year: 8.16%
-Total Expected ROI in 5 year: 13.58%
-Total Expected ROI in 10 year: 26.8%
+After analysis of the top three defensive stocks, determined by market cap, there were patterns that were observed. The main pattern observed was that defensive stocks did provide protection against market volatility. Based on these observations the recommendations go as follows:
 
 
-![graph3](./Images/SanAntonio.png)
+1) Walmart showed to have an downward trend, hold or sell WMT.
 
 
-**2) ZipCode 77471 Fort Bend County - Rosenberg (10 years):**
-Total Expected ROI in 1 year: 2.69%
-Total Expected ROI in 3 year: 8.08%
-Total Expected ROI in 5 year: 13.46%
-Total Expected ROI in 10 year: 26.68%
+2) KO showed to have an upward trend, buy KO.
 
 
-![graph4](./Images/Rosenberg.png)
-
-
-**3) ZipCode 79902 El Paso County - El Paso (3 years):**
-Total Expected ROI in 1 year: 4.61%
-Total Expected ROI in 3 year: 10.09%
-Total Expected ROI in 5 year: 12.77%
-Total Expected ROI in 10 year: 14.9%
-
-
-![graph5](./Images/ElPaso.png)
-
-
-**4) ZipCode 77546 Galveston County - Friendswood (10 years):**
-Total Expected ROI in 1 year: 2.62%
-Total Expected ROI in 3 year: 7.86%
-Total Expected ROI in 5 year: 13.09%
-Total Expected ROI in 10 year: 25.96%
-
-
-![graph6](./Images/Friendswood.png)
-
-
-**5) ZipCode 77532 Harris County - Crosby (10 years):**
-Total Expected ROI in 1 year: 2.39%
-Total Expected ROI in 3 year: 6.85%
-Total Expected ROI in 5 year: 11.24%
-Total Expected ROI in 10 year: 21.73%
-
-
-![graph7](./Images/Crosby.png)
+3) PG showed a bearish trend, buy PG.
 
 
 ### Next Steps
 
-1) This project focused solely on past home values to make predictions for the next 10 years. We can make the analysis more meaningful by incorporating factors such as population, school rankings, crime rate, and property size.
+1) This project focused mainly on recent market data, beginning in 2017. This created issues when trying to identify an accurate trend. For more accurate results we will gather information about the markets at an earlier date, starting preferably at 2010.
 
-2) We can remove coefficients of variance to have counties such as Dallas and Tarrant county included in analysis.
-
+2) We will include other indicies such as the VIX, NASDAQ, and Dow Jones to provide a wider market perspective to see how defensive stocks hedge against moves in the broader market.
 
 
 ## Repository Structure
