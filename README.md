@@ -22,6 +22,29 @@ PPI: Producer Price Index
 
 ### Methods and Analysis
 
+To begin analysis we first conducted timeseries analysis using SARIMA models on WMT, KO, and PG. The steps for each went as followed. We first began preprocessing we defined the 3 parameters, p, d, and q. Then for each separate stock we followed these steps:
+
+1) Dropped all columns but date and close price.
+2) Used bfill to fill all missing dates, weekends and holidays. 
+3) We then ran a grid pdq and seasonal pdq parameters calculated above and get the best AIC value.
+4) Plug the optimal parameter values into a new SARIMAX model and fit the results. 
+5) Call plot_diagnostics() on the results calculated.
+6) Get predictions starting from 01-01-1998 and calculate confidence intervals and Plot real vs predicted values along with confidence interval.
+7) Get the real and predicted values and get the mean squared error. 
+8) Plot the dynamic forecast with confidence intervals.
+
+After creating and analyzing the SARIMA models we followed it by conducting linear regression on each of the stocks. To do this we defined which of the features were most linear to the close price of the stock. Then we followed these steps:
+
+1) Create initial model and vizualize the terms. 
+2) log transform close price and most correlated feature. 
+3) Create final model.
+4) Plot final model on Q-Q plot. 
+5) Plot residuals. 
+
+
+![graph1](./Images/IMG1.png)
+
+![graph2](./Images/IMG2.png)
 
 
 ### Conclusion
