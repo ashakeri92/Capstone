@@ -71,7 +71,6 @@ After analysis of the top three defensive stocks, determined by market cap, ther
 ## Repository Structure
 
 ├── Data
-├── Images
 ├── Analysis.ipynb
 ├── Presentation4.pdf 
 ├── README.md 
