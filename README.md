@@ -42,13 +42,13 @@ After creating and analyzing the SARIMA models we followed it by conducting line
 5) Plot residuals. 
 
 
-![graph1](./Images/DynamicWMT.png)
+![graph1](./Images/Dynamic_WMT.png)
 Dynamic Forecast for WMT. 
 
-![graph2](./Images/DynamicKO.png)
+![graph2](./Images/Dynamic_KO.png)
 Dynamic Forecast for KO.
 
-![graph3](./Images/DynamicPG.png)
+![graph3](./Images/Dynamic_PG.png)
 Dynamic Forecast for PG
 
 ![graph4](./Images/ResidualsWMT.png)
