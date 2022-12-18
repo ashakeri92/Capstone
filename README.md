@@ -42,10 +42,23 @@ After creating and analyzing the SARIMA models we followed it by conducting line
 5) Plot residuals. 
 
 
-![graph1](./Images/IMG1.png)
+![graph1](./Images/DynamicWMT.png)
+Dynamic Forecast for WMT. 
 
-![graph2](./Images/IMG2.png)
+![graph2](./Images/DynamicKO.png)
+Dynamic Forecast for KO.
 
+![graph3](./Images/DynamicPG.png)
+Dynamic Forecast for PG
+
+![graph4](./Images/ResidualsWMT.png)
+Residual Plots from Linear Regression for WMT
+
+![graph5](./Images/ResidualsKO.png)
+Residual Plots from Linear Regression for KO
+
+![graph6](./Images/ResidualsPG.png)
+Residual Plots from Linear Regression for PG
 
 ### Conclusion
 
